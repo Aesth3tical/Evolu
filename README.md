@@ -11,8 +11,13 @@ For instructions on how to get started with hosting the bot, see below -
     * [Git](https://git-scm.com/)
 2. Clone this repository - ``git clone https://github.com/Aesth3tical/AYB-Hackathon-2021``
 3. Create a ``.env`` file in your bot workspace and put in the following values -
-    * ```
-    * TOKEN=your_bot_token
-    * MONGO=your_mongodb_connection_uri
-    * CLIENTID=your_bot_client_id
-    * ```
+```
+TOKEN=your_bot_token
+MONGO=your_mongodb_connection_uri
+CLIENTID=your_bot_client_id
+```
+4. Don't forget to save before continuing!
+5. Open a console/terminal and run ``npm run build``, followed by ``npm run start`` when that's done.
+6. If the output looks similar to the screenshot below, your bot should be responsive!
+
+![Screenshot](./misc/unknown.png)
