@@ -19,5 +19,4 @@ CLIENTID=your_bot_client_id
 4. Don't forget to save before continuing!
 5. Open a console/terminal and run ``npm run build``, followed by ``npm run start`` when that's done.
 6. If the output looks similar to the screenshot below, your bot should be responsive!
-
-![Screenshot](./misc/unknown.png)
+    * ![Screenshot](./misc/unknown.png)
