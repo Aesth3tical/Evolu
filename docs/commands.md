@@ -17,3 +17,6 @@ EvoluBot's commands are listed below, though please note that the only text comm
 > - help [command]
 > - ping
 > - setmanager <role>
+
+![Help command](./../misc/help_command.png)
+![Loadslash command](./../misc/loadslash.png)
