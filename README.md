@@ -9,12 +9,16 @@ This is a project I made for Advertise Your Bot's 2021 Hackathon. Out of the cat
 ## About the bot/libraries
 EvoluBot is a fully functional economy bot which uses slash commands to avoid parsing issues and unnecessary type determination code which would be necessary when using text commands for the purposes it serves. It runs on the [discord.js](https://github.com/discordjs/discord.js) **v13.4.0** library, as well as various other third party libraries aside from built-in node.js libraries such as [discord.js builders](https://github.com/discordjs/builders) and [dotenv](https://github.com/motdotla/dotenv). A full list of dependencies is below -
 > - [discord.js](https://github.com/discordjs/discord.js)
+>> - Test
 > - [@discordjs/rest](https://github.com/discordjs/discord.js-modules/tree/main/packages/rest)
 > - [discord-api-types](https://github.com/discordjs/discord-api-types)
 > - [mongoose](https://github.com/Automattic/mongoose)
 > - [fs](https://nodejs.org/api/fs.html)
 > - [dotenv](https://github.com/motdotla/dotenv)
 > - [path](https://github.com/jinder/path)
+
+## Commands
+
 
 ## Setup Instructions:
 For instructions on how to get started with hosting the bot, see below -
