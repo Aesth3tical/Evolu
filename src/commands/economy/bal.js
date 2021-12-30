@@ -6,6 +6,7 @@ module.exports = {
     data: new SlashCommandBuilder()
     	.setName('bal')
     	.setDescription('View your balance'),
+    category: 'economy',
     async execute (client, interaction) {
         await interaction.deferReply();
         

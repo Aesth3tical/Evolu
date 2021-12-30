@@ -1,3 +1,10 @@
+/*
+
+Handles TEXT messages, however only listens for users who are the bot owner in .env to run the %loadslash command,
+which as the name suggests loads the slash commands.
+
+*/
+
 const Discord = require('discord.js');
 const fs = require('fs');
 const { REST } = require('@discordjs/rest');
@@ -9,6 +16,8 @@ module.exports = {
     trigger: 2,
     async execute (message, client) {
         if (message.content === `${ADMIN_PREFIX}loadslash`) {
+            
+            // Checks if user running is the bot owner from .env
             if (OWNER !== message.author.id && message.author.id !== client.user.id) {
                 const notAllowed = new Discord.MessageEmbed()
                     .setColor('RED')
@@ -17,6 +26,8 @@ module.exports = {
                     return message.reply({ embeds: [ notAllowed ] })
             }
 
+
+            // Handles registration of guild's commands with the Discord API
             const commands = [];
 
             fs.readdirSync(`src/commands`).forEach(folder => {

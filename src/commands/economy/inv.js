@@ -7,6 +7,7 @@ module.exports = {
     	.setName('inv')
     	.setDescription('View your balance')
     	.addUserOption(option => option.setName('user').setDescription('User you wish to see the inventory of (optional)').setRequired(false)),
+    category: 'economy',
     async execute (client, interaction) {
         await interaction.deferReply();
         

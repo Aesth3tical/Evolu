@@ -8,6 +8,7 @@ module.exports = {
     	.setName('work')
     	.setDescription('Work for income'),
     // cooldown: 5,
+    category: 'economy',
     async execute (client, interaction) {
         await interaction.deferReply();
         

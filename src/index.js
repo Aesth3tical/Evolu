@@ -23,7 +23,6 @@ client.commands = new Map();
 client.prefix = '%'
 
 // Setup Event/Database Handlers
-
 const ef = fs.readdirSync(__dirname + '/events').filter(file => file.endsWith('.js'));
 console.log(ef)
 

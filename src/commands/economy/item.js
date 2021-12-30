@@ -10,7 +10,7 @@ module.exports = {
             command.setName('create').setDescription('Create an item')
             	.addStringOption(option => option.setName('name').setDescription('Item name').setRequired(true))
             	.addIntegerOption(option => option.setName('price').setDescription('Item price').setRequired(true))
-            	.addStringOption(option => option.setName('description').setDescription('Item description').setRequired(true))
+            	.addStringOption(option => option.setName('description').setDescription('Item description').setRequired(false))
         )
     	.addSubcommand(command =>
             command.setName('delete').setDescription('Delete an item')
@@ -21,12 +21,13 @@ module.exports = {
             	.addStringOption(option => option.setName('name').setDescription('Item name').setRequired(true))
             	.addStringOption(option => option.setName('new_name').setDescription('New item name').setRequired(true))
             	.addIntegerOption(option => option.setName('price').setDescription('New item price').setRequired(true))
-            	.addStringOption(option => option.setName('description').setDescription('New item description').setRequired(true))
+            	.addStringOption(option => option.setName('description').setDescription('New item description').setRequired(false))
         )
     	.addSubcommand(command =>
             command.setName('view').setDescription('View an item')
             	.addStringOption(option => option.setName('name').setDescription('Item name. Leaving this field blank will show all items').setRequired(false))
         ),
+    category: 'economy',
     async execute (client, interaction) {
         await interaction.deferReply();
         
@@ -50,11 +51,19 @@ module.exports = {
             let itemName = interaction.options.getString('name');
             let itemPrice = interaction.options.getInteger('price');
             let itemDesc = interaction.options.getString('description');
-            
+
+            if (itemDesc && itemDesc.length > 50) {
+                const error = new Discord.MessageEmbed()
+                	.setColor('RED')
+                	.setDescription('Item description must not be more than 50 characters!')
+                
+                return interaction.editReply({ embeds: [ error ] })
+            }
+
             let itemObj = {
                 name: itemName,
                 price: itemPrice,
-                description: itemDesc
+                description: itemDesc && itemDesc.length > 0 ? itemDesc : 'An item.'
             };
             
             console.log(itemObj)
@@ -82,7 +91,7 @@ module.exports = {
             	.addFields(
                 	{ name: 'Item Name', value: itemData.name[0].toUpperCase() + itemData.name.slice(1), inline: false },
                     { name: 'Price', value: itemData.price.toLocaleString(), inline: false },
-                    { name: 'Item Description', value: itemData.description[0].toUpperCase() + itemData.name.slice(1), inline: false }
+                    { name: 'Item Description', value: itemData.description[0].toUpperCase() + itemData.description.slice(1), inline: false }
                 )
             
             return interaction.editReply({ embeds: [ success ] });
@@ -129,6 +138,14 @@ module.exports = {
             let newPrice = interaction.options.getInteger('price');
             let newDesc = interaction.options.getString('description');
             
+            if (newDesci && newDesc.length > 50) {
+                const error = new Discord.MessageEmbed()
+                	.setColor('RED')
+                	.setDescription('Item description must not be more than 50 characters!')
+                
+                return interaction.editReply({ embeds: [ error ] })
+            }
+
             let itemData = await guildData.items.find(i => i.name.toLowerCase() === itemName.toLowerCase());
             
             if (!itemData) {
@@ -144,7 +161,7 @@ module.exports = {
             let itemObj = {
                 name: newName,
                 price: newPrice,
-                description: newDesc
+                description: itemDesc && itemDesc.length > 0 ? itemDesc : 'An item.'
             }
             
             await guildData.items.push(itemObj);

@@ -7,6 +7,7 @@ module.exports = {
     	.setName('setmanager')
     	.setDescription('Set your guilds\' manager role')
         .addRoleOption(option => option.setName('role').setDescription('Role to set as manager role').setRequired(true)),
+    category: 'utility',
     async execute (client, interaction) {
         await interaction.deferReply();
         

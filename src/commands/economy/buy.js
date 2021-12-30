@@ -8,6 +8,7 @@ module.exports = {
     	.setDescription('Buy an item')
     	.addStringOption(option => option.setName('item_name').setDescription('Name of the item you wish to buy').setRequired(true))
 	    .addIntegerOption(option => option.setName('amount').setDescription('How much of the item you wish to buy').setRequired(true)),
+    category: 'economy',
     async execute (client, interaction) {
         await interaction.deferReply();
         

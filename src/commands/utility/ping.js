@@ -6,6 +6,7 @@ module.exports = {
     	.setName('ping')
     	.setDescription('Ping the bot server'),
     cooldown: 1,
+    category: 'utility',
     async execute (client, interaction) {
         let pingEmbed = new Discord.MessageEmbed()
         	.setColor('GREEN')
