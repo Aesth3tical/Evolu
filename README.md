@@ -25,10 +25,10 @@ EvoluBot's commands are listed below, though please note that the only text comm
 > - crime
 > - inv [user]
 > - item
->> - item Create <name> <price> [description]
->> - item Delete <name>
->> - item Edit <name> <new_name> <new_price> [new_description]
->> - item View [name]
+>> - item create <name> <price> [description]
+>> - item delete <name>
+>> - item edit <name> <new_name> <new_price> [new_description]
+>> - item view [name]
 > - work
 
 **Utility:**
