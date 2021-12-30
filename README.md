@@ -18,4 +18,4 @@ For instructions on how to get started with hosting the bot, see below -
 4. Don't forget to save before continuing!
 5. Open a console/terminal and run ``npm run build``, followed by ``npm run start`` when that's done.
 6. If the output looks similar to the screenshot below, your bot should be responsive!
-    * ![Screenshot](./misc/unknown.png)
+    * ![Screenshot](./misc/README_image.png)
