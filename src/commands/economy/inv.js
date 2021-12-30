@@ -27,7 +27,7 @@ module.exports = {
             return interaction.editReply({ embeds: [ error ] });
         }
 
-        let inventory = userData.inventory.map(i => `**${i.name[0].toUpperCase() + i.name.slice(1).toLowerCase()}**\n> ${i.description[0].toUpperCase() + i.description.slice(1)}`).join('\n');
+        let inventory = userData.inventory.map(i => `**${i.name[0].toUpperCase() + i.name.slice(1).toLowerCase()} - ${i.amount}**\n> ${i.description[0].toUpperCase() + i.description.slice(1)}`).join('\n');
 
         let inv = new Discord.MessageEmbed()
         	.setColor('BLURPLE')

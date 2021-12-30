@@ -44,7 +44,7 @@ module.exports = {
             hasItem.amount += amount;
             userData.balance -= (itemData.price * amount);
             
-            (await userData.markModied('inventory'), await userData.save());
+            (await userData.markModified('inventory'), await userData.save());
             
             const success = new Discord.MessageEmbed()
             	.setColor('GREEN')

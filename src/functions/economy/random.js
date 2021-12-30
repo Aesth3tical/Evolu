@@ -11,7 +11,7 @@ module.exports = {
             "Community Manager"
         ];
 
-        const choose = jobs[Math.ceil(Math.random() * jobs.length)];
+        const choose = jobs[Math.floor(Math.random() * jobs.length)];
 
         return `You worked as a ${choose} and earned`;
     },
@@ -25,7 +25,7 @@ module.exports = {
             "stole someone's boat"
         ];
 
-        const choose = jobs[Math.ceil(Math.random() * jobs.length)];
+        const choose = jobs[Math.floor(Math.random() * jobs.length)];
 
         return `You ${choose} and earned`;
     }

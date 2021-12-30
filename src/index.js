@@ -4,8 +4,6 @@ const { Client, Intents, Collection } = require('discord.js');
 const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
-const { REST } = require('@discordjs/rest');
-const { Routes } = require('discord-api-types/v9');
 const { TOKEN, CLIENTID } = process.env;
 
 // Initiate Client
@@ -24,35 +22,7 @@ client.cooldowns = new Collection();
 client.commands = new Map();
 client.prefix = '%'
 
-// Setup Command/Event/Database Handlers
-const commands = [];
-
-fs.readdirSync(__dirname + `/commands`).forEach(folder => {
-    fs.readdirSync(__dirname + `/commands/${folder}`).forEach(file => {
-        const command = require(__dirname + `/commands/${folder}/${file}`);
-        client.commands.set(command.data.name, command)
-        commands.push(command.data.toJSON())
-    })
-})
-
-const rest = new REST({ version: '9' }).setToken(TOKEN);
-
-/*
-(async () => {
-    try {
-        console.log('Registering application (/) commands...');
-        
-        await rest.put(
-        	Routes.applicationCommands(CLIENTID),
-            { body: commands }
-        );
-        
-        console.log('Successfully registered application (/) commands!');
-    } catch (err) {
-        console.log(err);
-    }
-})();
-*/
+// Setup Event/Database Handlers
 
 const ef = fs.readdirSync(__dirname + '/events').filter(file => file.endsWith('.js'));
 console.log(ef)
