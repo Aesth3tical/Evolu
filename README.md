@@ -17,5 +17,5 @@ EvoluBot is a fully functional economy bot which uses slash commands to avoid pa
 > - [path](https://github.com/jinder/path)
 
 ## Docs
-> * :tools: [Commands](./docs/commands.md)
-> * :desktop: [Hosting/Setup](./docs/hosting.md)
+> * [⚒️ Commands](./docs/commands.md)
+> * [🖥️ Hosting/Setup](./docs/hosting.md)
