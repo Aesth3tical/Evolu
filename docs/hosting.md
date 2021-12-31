@@ -13,7 +13,7 @@ Any device or server which runs Linux/MacOS/Windows should be able to run the bo
 5. Open a console/terminal and run ``npm run build``, followed by ``npm run start`` when that's done.
 6. If the output looks similar to the screenshot below, your bot should be responsive!
     * ![Screenshot](./../misc/README_image.png)
-7. Run ``%loadslash`` in the respective guild to load the slash commands for use
+7. Run ``<admin_prefix>loadslash`` in the respective guild to load the slash commands for use
 
 ## Troubleshooting:
 It isn't letting me clone the repository!
