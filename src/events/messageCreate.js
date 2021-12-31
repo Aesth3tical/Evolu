@@ -40,8 +40,6 @@ module.exports = {
 
             const rest = new REST({ version: '9' }).setToken(TOKEN);
 
-            console.log(commands);
-
             (async () => {
                 try {
                     console.log('Registering guild (/) commands...');

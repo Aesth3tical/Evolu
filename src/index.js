@@ -4,7 +4,7 @@ const { Client, Intents, Collection } = require('discord.js');
 const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
-const { TOKEN, CLIENTID } = process.env;
+const { TOKEN } = process.env;
 
 // Initiate Client
 const client = new Client({

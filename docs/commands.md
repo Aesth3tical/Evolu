@@ -12,6 +12,9 @@ EvoluBot's commands are listed below, though please note that the only text comm
 >> - item edit <name> <new_name> <new_price> [new_description]
 >> - item view [name]
 > - work
+> - addmoney <user> <amount>
+> - remmoney <user> <amount>
+> - sell <item> <amount>
 
 **Utility:**
 > - help [command]

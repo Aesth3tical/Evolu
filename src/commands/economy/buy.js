@@ -49,7 +49,7 @@ module.exports = {
             
             const success = new Discord.MessageEmbed()
             	.setColor('GREEN')
-            	.setDescription(`Successfully purchased **${amount}** of \`\`${itemData.name}\`\`! You now have $${userData.balance}.`)
+            	.setDescription(`Successfully purchased **${amount}** of \`\`${itemData.name}\`\`! You now have $${userData.balance.toLocaleString()}.`)
             
             return interaction.editReply({ embeds: [ success ] })
         } else if (!hasItem) {
@@ -66,7 +66,7 @@ module.exports = {
             
             const success = new Discord.MessageEmbed()
             	.setColor('GREEN')
-            	.setDescription(`Successfully purchased **${amount}** of \`\`${itemData.name}\`\`! You now have $${userData.balance}.`)
+            	.setDescription(`Successfully purchased **${amount}** of \`\`${itemData.name}\`\`! You now have $${userData.balance.toLocaleString()}.`)
             
             return interaction.editReply({ embeds: [ success ] })
         }
