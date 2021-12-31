@@ -15,6 +15,7 @@ EvoluBot's commands are listed below, though please note that the only text comm
 > - addmoney <user> <amount>
 > - remmoney <user> <amount>
 > - sell <item> <amount>
+> - give <user> <amount>
 
 **Utility:**
 > - help [command]
