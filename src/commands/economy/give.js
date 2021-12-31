@@ -37,7 +37,7 @@ module.exports = {
 
         const success = new Discord.MessageEmbed()
             .setColor('GREEN')
-            .setDescription(`Successfully gave ${toData} $${amount.toLocalestring()}. You now have $${fromData.balance.toLocalestring()}, and they now have $${toData.balance.toLocalestring()}`);
+            .setDescription(`Successfully gave ${toData} $${amount.toLocaleString()}. You now have $${fromData.balance.toLocaleString()}, and they now have $${toData.balance.toLocaleString()}`);
         
         return interaction.editReply({ embeds: [ success ] })
     }
