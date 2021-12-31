@@ -16,6 +16,8 @@ EvoluBot is a fully functional economy bot which uses slash commands to avoid pa
 > - [dotenv](https://github.com/motdotla/dotenv)
 > - [path](https://github.com/jinder/path)
 
+The bot's code was built and runs without issue on **Node.js v17.3.0**, though is supported through a minimum of Node.js v16.
+
 ## Docs:
 > * [⚒️ Commands](./docs/commands.md)
 > * [🖥️ Hosting/Setup](./docs/hosting.md)
